@@ -1,0 +1,20 @@
+{
+  "private": true,
+  "license": "MIT",
+  "dependencies": {
+    "@tailwindcss/ui": "^0.3.0",
+    "alpinejs": "^2.3.5",
+    "autoprefixer": "^9.8.0",
+    "tailwindcss": "^1.4.6",
+    "tailwindcss-typography": "^3.1.0"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4",
+    "prettier": "^2.0.5",
+    "pug": "^3.0.0"
+  },
+  "scripts": {
+    "start": "parcel src/index.pug --public-url /conference",
+    "build": "parcel build src/**/*.pug"
+  }
+}
