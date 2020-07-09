@@ -15,6 +15,6 @@
   },
   "scripts": {
     "start": "parcel src/index.pug --public-url /conference",
-    "build": "parcel build src/**/*.pug"
+    "build": "parcel build src/**/*.pug --public-url /conference"
   }
 }
