@@ -1,3 +1,206 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import '@ibm/plex/css/ibm-plex.min.css';
+
+:root {
+  font: 16px / 1 sans-serif;
+  --bright-sky-color: #80ced2;
+  --night-sky-color: #85577e;
+  --sun-color: #d5562b;
+  --sea-color: #5a9090;
+  --sand-color: #f7f0da;
+  --asphalt-color: #2f3737;
+  --lime-color: #b1d133;
+  --tangerine-color: #f99d1b;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  min-height: 100%;
+  font-family: 'IBM Plex Mono', 'Menlo', 'DejaVu Sans Mono',
+    'Bitstream Vera Sans Mono', Courier, monospace;
+  color: var(--sand-color);
+}
+
+a:link,
+a:visited {
+  color: var(--bright-sky-color);
+}
+
+a:focus,
+a:hover {
+}
+
+a:active {
+}
+
+header {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--asphalt-color);
+}
+
+header h1 {
+  font-size: 3rem;
+  margin: 0;
+  background: linear-gradient(
+      42deg,
+      var(--bright-sky-color) 0%,
+      var(--tangerine-color) 50%
+    )
+    text;
+  -webkit-text-fill-color: transparent;
+}
+
+header h1 span {
+  display: block;
+  background: linear-gradient(
+      42deg,
+      var(--bright-sky-color) 0%,
+      var(--night-sky-color) 80%
+    )
+    text;
+}
+
+main {
+  background-size: cover;
+  background-attachment: fixed;
+  background-image: linear-gradient(
+      rgba(47, 55, 55, 0.9) 0%,
+      rgba(47, 55, 55, 1) 100%
+    ),
+    url(splash.svg);
+}
+
+h2,
+h3 {
+  color: var(--lime-color);
+}
+
+.cta a {
+  margin: 2rem 0;
+  display: inline-block;
+  padding: 1rem;
+  font-weight: bold;
+  color: var(--sand-color);
+  text-decoration: none;
+  background-image: linear-gradient(
+    42deg,
+    var(--night-sky-color) 0%,
+    var(--bright-sky-color) 100%,
+    var(--night-sky-color) 100%
+  );
+  background-size: 200%;
+  transition: background-position 0.2s cubic-bezier(0.47, 0.1, 1, 0.63),
+    color 0.1s linear;
+  transition-delay: 0s, 0.05s;
+}
+
+.cta a:hover {
+  color: white;
+  cursor: pointer;
+  background-position: 100% 100%;
+}
+
+section {
+  max-width: 720px;
+  padding: 1rem;
+}
+
+main,
+footer {
+  display: flex;
+  justify-content: center;
+}
+
+.program table {
+  border-spacing: 0;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.program th,
+.program td {
+  vertical-align: top;
+  text-align: left;
+  padding: 1rem 0;
+}
+
+.program th {
+  font-weight: normal;
+}
+
+.program th span {
+  text-transform: uppercase;
+  font-size: 1rem;
+  margin-left: 0.5rem;
+}
+
+.program th,
+.program .title {
+  font-size: 1.4rem;
+}
+
+.program td p {
+  vertical-align: top;
+  margin: 0;
+}
+
+.program tr:not(:last-child) td,
+.program tr:not(:last-child) th {
+  border-bottom: 2px solid rgba(var(--sand-color), 0.5);
+}
+
+.program .title {
+  color: var(--tangerine-color);
+  font-weight: bold;
+}
+
+.connect ul {
+  list-style: none;
+  padding-left: 0;
+  line-height: 1.1rem;
+}
+
+footer {
+  background-color: var(--asphalt-color);
+}
+
+footer p {
+  font-size: 0.8rem;
+  line-height: 1rem;
+}
+
+footer section {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-gap: 2rem;
+}
+
+footer img {
+  width: 200px;
+}
+
+@media only screen and (max-width: 600px) {
+  footer section {
+    display: block;
+  }
+}
+
+.copyright {
+  grid-column: 1 / span 2;
+}
+
+.copyright .comment {
+  display: block;
+  opacity: 50%;
+}
+
+.copyright .comment span {
+  color: #f99;
+}
