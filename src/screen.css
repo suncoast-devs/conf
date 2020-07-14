@@ -46,7 +46,7 @@ header {
 }
 
 header h1 {
-  font-size: 3rem;
+  font-size: 3.8rem;
   margin: 0;
   background: linear-gradient(
       42deg,
@@ -65,6 +65,43 @@ header h1 span {
       var(--night-sky-color) 80%
     )
     text;
+}
+
+header .hint {
+  position: absolute;
+  bottom: 2rem;
+}
+
+header .hint {
+  animation-name: bounce;
+  animation-timing-function: cubic-bezier(0.28, 0.84, 0.42, 1);
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  transform-origin: bottom;
+}
+
+@keyframes bounce {
+  0% {
+    transform: scale(1, 1) translateY(0);
+  }
+  10% {
+    transform: scale(1.05, 0.95) translateY(0);
+  }
+  30% {
+    transform: scale(0.95, 1.05) translateY(-8px);
+  }
+  50% {
+    transform: scale(1.025, 0.925) translateY(0);
+  }
+  57% {
+    transform: scale(1, 1) translateY(-1px);
+  }
+  64% {
+    transform: scale(1, 1) translateY(0);
+  }
+  100% {
+    transform: scale(1, 1) translateY(0);
+  }
 }
 
 main {
@@ -164,7 +201,11 @@ footer {
 .connect ul {
   list-style: none;
   padding-left: 0;
-  line-height: 1.1rem;
+  display: flex;
+}
+
+.connect li {
+  padding: 0.4rem;
 }
 
 footer {
@@ -198,7 +239,7 @@ footer img {
 
 .copyright .comment {
   display: block;
-  opacity: 50%;
+  opacity: 0.5;
 }
 
 .copyright .comment span {
