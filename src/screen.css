@@ -64,6 +64,8 @@ header h1 span {
     var(--bright-sky-color) 0%,
     var(--night-sky-color) 80%
   );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 header .hint {
