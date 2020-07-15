@@ -49,22 +49,21 @@ header h1 {
   font-size: 3.8rem;
   margin: 0;
   background: linear-gradient(
-      42deg,
-      var(--bright-sky-color) 0%,
-      var(--tangerine-color) 50%
-    )
-    text;
+    42deg,
+    var(--bright-sky-color) 0%,
+    var(--tangerine-color) 50%
+  );
+  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 header h1 span {
   display: block;
   background: linear-gradient(
-      42deg,
-      var(--bright-sky-color) 0%,
-      var(--night-sky-color) 80%
-    )
-    text;
+    42deg,
+    var(--bright-sky-color) 0%,
+    var(--night-sky-color) 80%
+  );
 }
 
 header .hint {
