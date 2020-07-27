@@ -175,6 +175,7 @@ footer {
 
 .program th {
   font-weight: normal;
+  padding-right: 2rem;
 }
 
 .program th span {
@@ -184,7 +185,7 @@ footer {
 }
 
 .program th,
-.program .title {
+.program .speaker {
   font-size: 1.4rem;
 }
 
@@ -198,7 +199,7 @@ footer {
   border-bottom: 2px solid rgba(var(--sand-color), 0.5);
 }
 
-.program .title {
+.program .speaker {
   color: var(--tangerine-color);
   font-weight: bold;
 }
