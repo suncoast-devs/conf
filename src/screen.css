@@ -48,6 +48,11 @@ header {
 header h1 {
   font-size: 3.8rem;
   margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+header h1 span {
   background: linear-gradient(
     42deg,
     var(--bright-sky-color) 0%,
@@ -57,8 +62,7 @@ header h1 {
   -webkit-text-fill-color: transparent;
 }
 
-header h1 span {
-  display: block;
+header h1 span.conf {
   background: linear-gradient(
     42deg,
     var(--bright-sky-color) 0%,
