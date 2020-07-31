@@ -158,6 +158,32 @@ main,
 footer {
   display: flex;
   justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+section.links {
+  background-color: var(--asphalt-color);
+  max-width: initial;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+section.links ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-left: 0;
+  list-style: none;
+}
+
+section.links li {
+  text-align: center;
+  margin: 4rem;
+  flex: 1;
 }
 
 .program table {
